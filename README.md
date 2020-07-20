@@ -2,16 +2,16 @@
 
 The scripts were developed as a review of existing reinforcement learning tools.
 
-About games.py
+### Regarding games.py:
 
 It has 6 subclasses:
 
-1) matching_pennies
-2) prisoner_dilemma
-3) stag_hunt
-4) RPS (Rock, Paper, and Scissors)
-5) hawk_dove
-6) wrap
+1) matching_pennies;
+2) prisoner_dilemma;
+3) stag_hunt;
+4) RPS (Rock, Paper, and Scissors);
+5) hawk_dove;
+6) wrap.
 
 The last class takes two numpy 2 dimensional arrays and returns a game with
 the arrays as payoff matrices.
@@ -20,13 +20,12 @@ All games have only 2 agents with equal number of actions.
 
 All classes have 4 methods:
 
-1) agent_set - Returns set of agents.
-2) action_set - Returns set of actions.
-3) payoff - Returns payoff matrices of both agents.
+1) agent_set - Returns set of agents;
+2) action_set - Returns set of actions;
+3) payoff - Returns payoff matrices of both agents;
 4) best_resp - Takes array of actions and returns the best responses.
 
-
-About qlearn.py
+### Regarding qlearn.py:
 
 It has only one function - PHC (Policy Hill Climbing).
 It includes both PHC and WoLF PHC (Win or Learn Fast).
@@ -42,14 +41,13 @@ As arguments it takes:
 1) game
 2) immediate reward
 3) gamma (discount parameter)
-4) alpha_param (share of maximum Q in Q-value).
-   It takes [b, a] and puts into alpha = 1/(b + a*t).
-   Variable t is current itiration.  
-5) delta_param (change of policy).
-   If WoLF, it takes 3 values [b, a, c],
-   puts them into delta for win strategy 1/(b + a*t)
-   and into delta for loss strategy:c*(1/(b + a*t)).
-   If not-WoLF, it takes 1 value as a fixed delta in [0,1].
+4) alpha_param (share of maximum Q in Q-value):
+   - it takes [b, a] and puts into alpha = 1/(b + a*t);
+   - variable t is current itiration.  
+5) delta_param (change of policy):
+   - if WoLF, it takes 3 values [b, a, c],
+       puts them into the delta for win strategy and into the delta for loss strategy.
+   - if not-WoLF, it takes 1 value as a fixed delta in [0,1].
 6) iter_max (maximum number of iterations)
 7) explore_rate (exploration rate in [0,1])
 8) WoLF (turns on WoLF PHC when True)
