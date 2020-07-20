@@ -38,9 +38,9 @@ The algorithms were taken from:
 
 As arguments it takes:
 
-1) game
-2) immediate reward
-3) gamma (discount parameter)
+1) game;
+2) immediate reward;
+3) gamma (discount parameter);
 4) alpha_param (share of maximum Q in Q-value):
    - it takes [b, a] and puts into alpha = 1/(b + a*t);
    - variable t is current itiration.  
@@ -48,9 +48,9 @@ As arguments it takes:
    - if WoLF, it takes 3 values [b, a, c],
        puts them into the delta for win strategy and into the delta for loss strategy.
    - if not-WoLF, it takes 1 value as a fixed delta in [0,1].
-6) iter_max (maximum number of iterations)
-7) explore_rate (exploration rate in [0,1])
-8) WoLF (turns on WoLF PHC when True)
+6) iter_max (maximum number of iterations);
+7) explore_rate (exploration rate in [0,1]);
+8) WoLF (turns on WoLF PHC when True).
 
 
 Jupyter notebook example.ipynb includes a demonstrative execution code.
