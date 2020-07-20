@@ -42,17 +42,14 @@ As arguments it takes:
 1) game
 2) immediate reward
 3) gamma (discount parameter)
-4) alpha_param (share of maximum Q in Q-value)
-   Takes [b, a] and puts into alpha = 1/(b + a*t).
-   Variable t is current itiration.
-5) delta_param (change of policy)
-
-   If WoLF, takes 3 values [b, a, c] and
-   puts into delta for win strategy: 1/(b + a*t)
-   and into delta for loss strategy: c*(1/(b + a*t))
-   
-   If not-WoLF, takes 1 value as a fixed delta in [0,1].
-
+4) alpha_param (share of maximum Q in Q-value).
+   It takes [b, a] and puts into alpha = 1/(b + a*t).
+   Variable t is current itiration.  
+5) delta_param (change of policy).
+   If WoLF, it takes 3 values [b, a, c],
+   puts them into delta for win strategy 1/(b + a*t)
+   and into delta for loss strategy:c*(1/(b + a*t)).
+   If not-WoLF, it takes 1 value as a fixed delta in [0,1].
 6) iter_max (maximum number of iterations)
 7) explore_rate (exploration rate in [0,1])
 8) WoLF (turns on WoLF PHC when True)
